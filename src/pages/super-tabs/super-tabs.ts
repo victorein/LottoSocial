@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MorePage } from '../more/more';
-import { SyndicatePage } from '../syndicate/syndicate';
+import { SyndicateTabsPage } from '../syndicate-tabs/syndicate-tabs';
 import { HomePage } from '../home/home';
 import { GamesPage } from '../games/games';
-import { StorePage } from '../store/store';
+import { StoreTabsPage } from '../store-tabs/store-tabs';
 
 @IonicPage()
 @Component({
@@ -13,10 +13,10 @@ import { StorePage } from '../store/store';
 })
 export class SuperTabsPage {
   more: any = MorePage;
-  syndicate: any = SyndicatePage;
+  syndicateTabs: any = SyndicateTabsPage;
   home: any = HomePage;
   games: any = GamesPage;
-  store: any = StorePage;
+  storeTabs: any = StoreTabsPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 

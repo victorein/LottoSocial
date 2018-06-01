@@ -7,21 +7,29 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { SuperTabsModule } from 'ionic2-super-tabs';
 import { SuperTabsPage } from '../pages/super-tabs/super-tabs';
+import { SyndicateTabsPage } from '../pages/syndicate-tabs/syndicate-tabs';
+import { StoreTabsPage } from '../pages/store-tabs/store-tabs';
 import { MorePage } from '../pages/more/more';
-import { SyndicatePage } from '../pages/syndicate/syndicate';
 import { HomePage } from '../pages/home/home';
 import { GamesPage } from '../pages/games/games';
-import { StorePage } from '../pages/store/store';
+import { SyndicatePage } from '../pages/syndicate/syndicate';
+import { CheckWinningsPage } from '../pages/check-winnings/check-winnings';
+import { OffersYouPage } from '../pages/offers-you/offers-you';
+import { BonusCreditPage } from '../pages/bonus-credit/bonus-credit';
 
 @NgModule({
   declarations: [
     MyApp,
     SuperTabsPage,
+    SyndicateTabsPage,
+    StoreTabsPage,
     MorePage,
-    SyndicatePage,
     HomePage,
     GamesPage,
-    StorePage
+    SyndicatePage,
+    CheckWinningsPage,
+    OffersYouPage,
+    BonusCreditPage
   ],
   imports: [
     BrowserModule,
@@ -32,11 +40,15 @@ import { StorePage } from '../pages/store/store';
   entryComponents: [
     MyApp,
     SuperTabsPage,
+    SyndicateTabsPage,
+    StoreTabsPage,
     MorePage,
-    SyndicatePage,
     HomePage,
     GamesPage,
-    StorePage
+    SyndicatePage,
+    CheckWinningsPage,
+    OffersYouPage,
+    BonusCreditPage
   ],
   providers: [
     StatusBar,

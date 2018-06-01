@@ -1,18 +1,26 @@
-<!--
-  Generated template for the SyndicatePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>syndicate</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
+<ion-content nopadding>
+  <ion-card *ngFor="let card of cards;let i=index;">
+    <ion-card-header>
+      <img src="{{card?.image}}" tappable />
+      <ion-card-title>{{card.label}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item class="card-date">
+        <ion-label>Created: {{card.created}}</ion-label>
+        <ion-label>
+          End date: {{card.endDate}}
+          <ion-icon *ngIf="!card.expand" name="arrow-down" tappable (click)="expand(i)"></ion-icon>
+          <ion-icon *ngIf="card.expand" name="arrow-up" tappable (click)="expand(i)"></ion-icon>
+        </ion-label>
+      </ion-item>
+      <ion-item *ngIf="card.expand" class="buy-ticket">
+        <button item-left ion-button tappable>BUY MORE</button>
+        <button item-right ion-button tappable>YOUR TICKETS</button>
+      </ion-item>
+      <ion-item *ngIf="card.expand" class="alarm-settings">
+        <button item-left ion-button clear tappable><ion-icon name="alarm"></ion-icon>DUE TO PLAY</button>
+        <button item-right ion-button clear tappable><ion-icon name="settings"></ion-icon>SETTINGS</button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
