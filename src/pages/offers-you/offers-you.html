@@ -1,12 +1,53 @@
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>offers-you</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
+<ion-content nopadding>
+  <div class="card-content">
+    <ion-label class="slider-title">TODAY'S OFFERS</ion-label>
+    <ion-slides slidesPerView="1.2">
+      <ion-slide>
+        <img src="assets/imgs/store/slide1.png"/>
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/imgs/store/slide1.png"/>
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/imgs/store/slide1.png"/>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div class="card-content lottory-content">
+    <ion-label class="slider-title">SELECT A LOTTORY</ion-label>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <img src="assets/imgs/store/euro millions.png"/>
+            <ion-card-title color="background">£32M</ion-card-title>
+            <ion-label color="danger">00:01:51:45</ion-label>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card>
+            <img src="assets/imgs/store/euro jackpot.png"/>
+            <ion-card-title>£41M</ion-card-title>
+            <ion-label>03:01:51:45</ion-label>
+          </ion-card>
+        </ion-col>        
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <img src="assets/imgs/store/euro millions.png"/>
+            <ion-card-title color="danger">£5M</ion-card-title>
+            <ion-label>00:01:51:45</ion-label>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card>
+            <img src="assets/imgs/store/euro jackpot.png"/>
+            <ion-card-title color="primary">£114M</ion-card-title>
+            <ion-label>03:01:51:45</ion-label>
+          </ion-card>
+        </ion-col>        
+      </ion-row>      
+    </ion-grid>
+  </div>
 </ion-content>
