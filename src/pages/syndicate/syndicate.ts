@@ -8,6 +8,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SyndicatePage {
   cards: any = [];
+  itemExpandHeight: number = 82;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.cards = [
       {
@@ -16,7 +17,7 @@ export class SyndicatePage {
         label: "ZULA0280",
         created: "May 29, 2018",
         endDate: "oneoff",
-        expand: false
+        expanded: false
       },
       {
         id: 1,
@@ -24,7 +25,7 @@ export class SyndicatePage {
         label: "ELBA0447",
         created: "May 29, 2018",
         endDate: "stopped",
-        expand: false
+        expanded: false
       },
       {
         id: 2,
@@ -32,7 +33,7 @@ export class SyndicatePage {
         label: "ZULA0280",
         created: "May 29, 2018",
         endDate: "oneoff",
-        expand: false
+        expanded: false
       }
     ]
   }
@@ -42,6 +43,6 @@ export class SyndicatePage {
   }
 
   expand(i) {
-    this.cards[i]['expand'] = this.cards[i]['expand'] ? false : true;
+    this.cards[i]['expanded'] = this.cards[i]['expanded'] ? false : true;
   }
 }

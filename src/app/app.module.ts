@@ -16,6 +16,7 @@ import { SyndicatePage } from '../pages/syndicate/syndicate';
 import { CheckWinningsPage } from '../pages/check-winnings/check-winnings';
 import { OffersYouPage } from '../pages/offers-you/offers-you';
 import { BonusCreditPage } from '../pages/bonus-credit/bonus-credit';
+import { ExpandableComponent } from '../components/expandable/expandable';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { BonusCreditPage } from '../pages/bonus-credit/bonus-credit';
     SyndicatePage,
     CheckWinningsPage,
     OffersYouPage,
-    BonusCreditPage
+    BonusCreditPage,
+    ExpandableComponent
   ],
   imports: [
     BrowserModule,

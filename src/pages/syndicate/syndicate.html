@@ -9,18 +9,20 @@
         <ion-label>Created: {{card.created}}</ion-label>
         <ion-label>
           End date: {{card.endDate}}
-          <ion-icon *ngIf="!card.expand" name="arrow-down" tappable (click)="expand(i)"></ion-icon>
-          <ion-icon *ngIf="card.expand" name="arrow-up" tappable (click)="expand(i)"></ion-icon>
+          <ion-icon *ngIf="!card.expanded" name="arrow-down" tappable (click)="expand(i)"></ion-icon>
+          <ion-icon *ngIf="card.expanded" name="arrow-up" tappable (click)="expand(i)"></ion-icon>
         </ion-label>
       </ion-item>
-      <ion-item *ngIf="card.expand" class="buy-ticket">
-        <button item-left ion-button tappable>BUY MORE</button>
-        <button item-right ion-button tappable>YOUR TICKETS</button>
-      </ion-item>
-      <ion-item *ngIf="card.expand" class="alarm-settings">
-        <button item-left ion-button clear tappable><ion-icon name="alarm"></ion-icon>DUE TO PLAY</button>
-        <button item-right ion-button clear tappable><ion-icon name="settings"></ion-icon>SETTINGS</button>
-      </ion-item>
+      <expandable [expandHeight]="itemExpandHeight" [expanded]="!card.expanded">
+        <div class="buy-ticket">
+            <button item-left ion-button tappable>BUY MORE</button>
+            <button item-right ion-button tappable>YOUR TICKETS</button>
+        </div>
+          <div class="alarm-settings">
+            <button item-left ion-button clear tappable><ion-icon name="alarm"></ion-icon>DUE TO PLAY</button>
+            <button item-right ion-button clear tappable><ion-icon name="settings"></ion-icon>SETTINGS</button>
+          </div>
+      </expandable>
     </ion-card-content>
   </ion-card>
 </ion-content>
