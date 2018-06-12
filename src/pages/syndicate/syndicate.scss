@@ -2,14 +2,14 @@ page-syndicate {
     .scroll-content {
         border-bottom: 0px;
     }
-    .card-ios {
+    .card {
         margin-bottom: 25px;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
         border-radius: 8px;
-        .card-header-ios {
+        .card-header {
             padding: 0px;
             position: relative;
-            .card-title-ios {
+            .card-title {
                 background-color: rgba(1,1,0,0.6);
                 color: #fff;
                 position: absolute;
@@ -21,7 +21,7 @@ page-syndicate {
                 margin: 0px;
             }
         }
-        .card-content-ios {
+        .card-content {
             padding: 0px;
             ion-item {
                 ion-label:first-child {
@@ -38,21 +38,31 @@ page-syndicate {
                     }
                 }
             }
-            .card-date ion-label {
-                color: #888;
-                font-size: 14px;
+            ion-col.arrow-icon {
+                margin-top: 3px;
             }
+            .ticket-btn {
+                padding: 0px;
+                .button {
+                    padding: 10px 6%;
+                    height: 32px;
+                    margin: 0px;
+                    width: 100%;
+                    font-weight: bold;
+                }
+            }
+
             .buy-ticket {
                 border-top: 1px solid #666;
                 border-bottom: 2px solid #aaa;
                 padding: 0px  8px;
-                .button-ios {
+                .button {
                     padding: 10px 6%;
                     height: 32px;
                 }
             }
             .alarm-settings {
-                .button-ios {
+                .button {
                     height: 32px;
                 }
                 .button-inner {
@@ -69,6 +79,16 @@ page-syndicate {
         }  
         .collapsed {
             height: 0 !important;
+        }
+    }
+    ion-col {
+        &[width-25] {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+        &[width-50] {
+            flex: 0 0 50%;
+            max-width: 50%;
         }
     }
 }
