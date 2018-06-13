@@ -8,8 +8,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SyndicatePage {
   cards: any = [];
-  itemExpandHeight: number = 82;
+  itemExpandHeight: number = 190;
   dueImage = 'assets/img/status_due.png';
+  chatIcon = 'assets/icon/chat-icon.png';
+  bottomImage = 'assets/image/landing-page-header@3x.png';
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.cards = [{
       id: 0,

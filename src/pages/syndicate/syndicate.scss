@@ -23,23 +23,10 @@ page-syndicate {
         }
         .card-content {
             padding: 0px;
-            ion-item {
-                ion-label:first-child {
-                    margin-right: 0px;
-                }
-                ion-label:last-child {
-                    text-align: right;
-                    position: relative;
-                    padding-right: 15px;
-                    ion-icon {
-                        position: absolute;
-                        right: 0px;
-                        top: 1px;
-                    }
-                }
-            }
             ion-col.arrow-icon {
                 margin-top: 3px;
+                text-align: left;
+                padding-left: 15px;
             }
             .ticket-btn {
                 padding: 0px;
@@ -51,27 +38,74 @@ page-syndicate {
                     font-weight: bold;
                 }
             }
-
-            .buy-ticket {
-                border-top: 1px solid #666;
-                border-bottom: 2px solid #aaa;
-                padding: 0px  8px;
-                .button {
-                    padding: 10px 6%;
-                    height: 32px;
+            .chat-icon {
+                height: 25px;
+                width: auto;
+                margin: 0px auto;
+                cursor: pointer;
+            }
+            .ticket-group {
+                margin: 0px 8px;
+                ion-item.item {
+                    padding: 0px 8px;
+                    background-color: #e6e6e6;
+                    .item-button {
+                        background-color: #689ad6;
+                    }
+                    ion-label {
+                        font-size: 14px;
+                        text-align: right;
+                        margin-right: 0px;
+                    }
+                }
+                ion-item.item:first-child {
+                    border-bottom: 1px solid #c4c4c4;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                }
+                ion-item.item:last-child {
+                    border-bottom-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
                 }
             }
             .alarm-settings {
-                .button {
+                ion-label.label {
                     height: 32px;
                 }
-                .button-inner {
+                ion-label.label {
                     color: #444;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-bottom: 0px;
+                    img {
+                        height: 16px;
+                        width: auto;
+                        margin-right: 6px;
+                        display: inline-block;
+                    }
                     ion-icon {
                         color: #488aff;
                         margin-right: 5px;
                     }
                 }
+            }
+            .active-members {
+                font-size: 14px;
+                color: #4f8dd7;
+                margin: 0px 10px;
+                padding-top: 16px;
+                border-top: 1px solid #c4c4c4;
+                font-weight: bold;
+            }
+        }
+        .check-card {
+            margin: 16px;
+            button.button {
+                height: 36px;
+                width: 80%;
+                font-size: 14px;
+                font-weight: bold;
+                background-color: #00a650;
             }
         }
         .expand-wrapper {
@@ -79,6 +113,17 @@ page-syndicate {
         }  
         .collapsed {
             height: 0 !important;
+        }
+    }
+    .card.bottom-card {
+        border-bottom-left-radius: unset;
+        border-bottom-right-radius: unset;
+        img {
+            border-bottom-left-radius: 32px;
+            border-bottom-right-radius: 32px;
+            width: 100%;
+            height: auto;
+            max-height: 80px;
         }
     }
     ion-col {
